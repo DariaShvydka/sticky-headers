@@ -31,5 +31,4 @@ function normalizeTitle(title) {
 const container = document.querySelector('#container');
 generatePage(container);
 
-window.scrollToHeader = scrollToHeader;
 })();
