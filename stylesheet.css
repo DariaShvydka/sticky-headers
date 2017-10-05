@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --default-padding: 20px;
+    --header-height: 80px;
+    --sticky-pos: 10px;
+}
+body {
+    margin: calc(var(--default-padding) * 2) auto;
+    line-height: 1.6;
+    color: rgb(61, 73, 78);
+    font-size: 15px;
+    font-family: "Courier New", Courier, monospace;
+    background: -webkit-linear-gradient(left, #E6E6E6, #808080);
+    background: -o-linear-gradient(right, #E6E6E6, #808080);
+    background: -moz-linear-gradient(right, #E6E6E6, #808080);
+    background: linear-gradient(to right, #E6E6E6, #808080);
+    max-width: 1000px;
+}
+main {
+    display: flex;
+    height: 100vh;
+}
+h2 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 300;
+}
+#container {
+    will-change: scroll-position; /* make overflow fast on non-retina */
+    scroll-behavior: smooth; /* slow and gently scrolling */
+  }
+#sticky-wrapper {
+  padding: var(--default-padding);
+  /*background-color: #ECEFF1;*/
+}
+.sticky {
+    position: sticky;
+    top: var(--sticky-pos); /* Sentinels adjust based on this position. */
+    height: var(--header-height);
+    padding: 0 var(--default-padding);
+    display: flex;
+    align-items: center;
+    margin-bottom: -120px;
+}
+[data-ma] {
+    text-align: justify;
+    position: relative; /* contain the sentinels */
+    /*background-color: #fff;*/
+}
+[data-ma] h2 {
+    color: #fff;
+}
+.sticky-text {
+  padding: 130px var(--default-padding) 0;
+}
